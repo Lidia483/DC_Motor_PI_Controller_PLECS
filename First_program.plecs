@@ -1,0 +1,958 @@
+Plecs {
+  Name          "First_program"
+  Version       "4.9"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      "1.0"
+  Timeout       ""
+  Solver        "auto"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  NonIdealSwitchResistance "1"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  DatatypeOverflowMsg "3"
+  DatatypeInheritanceConflictMsg "2"
+  ContSampleTimeConflictMsg "2"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AlgebraicLoopWithStateMachineMsg "3"
+  AssertionAction "1"
+  FixedPointDatatypeOverride "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenFloatingPointFormat "2"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  RemoveUnusedStateSpaceOutputs "2"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings ""
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry ""
+  ScriptsDialogSplitterPos "0"
+  Schematic {
+    Location      [542, 125; 942, 398]
+    ZoomFactor    1
+    SliderPosition [0, 0]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          Subsystem
+      Name          "Code Generation\nSubsystem"
+      Show          on
+      Position      [190, 120]
+      Direction     up
+      Flipped       off
+      LabelPosition south
+      Frame         [-65, -45; 65, 45]
+      TreatAsAtomicUnit on
+      SampleTime    "-1"
+      TaskingMode "1"
+      CodeGenEnable on
+      CodeGenSampleTime "1e-5"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "STM32G4x"
+      CodeGenTargetSettings "AAAAfwAAAAAbQ29kZUdlblRhcmdldDo6U2V0dGluZ3NNYXAAA"
+"AAAAQAAABAAUwBUAE0AMwAyAEcANAB4AAAAVgAAAA4AQQBkAGMAVgBSAGUAZgAAAAYAMwAuADMAAA"
+"AaAEEAbgBhAGwAbwBnAEYAbAB0AFMAaQBnADEAAAACADAAAAAaAEEAbgBhAGwAbwBnAEYAbAB0AFM"
+"AaQBnADIAAAACADAAAAAaAEEAbgBhAGwAbwBnAEYAbAB0AFMAaQBnADMAAAACADAAAAAaAEEAbgBh"
+"AGwAbwBnAEYAbAB0AFMAaQBnADQAAAACADAAAAAaAEEAbgBhAGwAbwBnAEYAbAB0AFMAaQBnADUAA"
+"AACADAAAAAaAEEAbgBhAGwAbwBnAEYAbAB0AFMAaQBnADYAAAACADAAAAAaAEEAbgBhAGwAbwBnAE"
+"YAbAB0AFMAaQBnADcAAAACADAAAAAeAEEAdQB0AG8AcAByAG8AYgBlAEQAZQB2AGkAYwBlAAAAAgA"
+"wAAAAEgBCAHUAaQBsAGQAVAB5AHAAZQAAAAIAMwAAAAgAQwBoAGkAcAAAAAIAMgAAACQAQwBoAGkA"
+"cABWAGEAcgBpAGEAbgB0AHMARwA0ADMAMQB4AHgAAAACADEAAAAkAEMAaABpAHAAVgBhAHIAaQBhA"
+"G4AdABzAEcANAA3ADQAeAB4AAAAAgAxAAAAEABDAG8AbQBwAE8AdQB0ADEAAAACADEAAAAQAEMAbw"
+"BtAHAATwB1AHQAMgAAAAIAMQAAABAAQwBvAG0AcABPAHUAdAAzAAAAAgAxAAAAEABDAG8AbQBwAE8"
+"AdQB0ADQAAAACADEAAAAQAEMAbwBtAHAATwB1AHQANQAAAAIAMQAAABAAQwBvAG0AcABPAHUAdAA2"
+"AAAAAgAxAAAAEABDAG8AbQBwAE8AdQB0ADcAAAACADEAAAAWAEMAbwBtAHAATwB1AHQAUABpAG4AM"
+"QAAAAIAMAAAABYAQwBvAG0AcABPAHUAdABQAGkAbgAyAAAAAgAwAAAAFgBDAG8AbQBwAE8AdQB0AF"
+"AAaQBuADMAAAACADAAAAAWAEMAbwBtAHAATwB1AHQAUABpAG4ANAAAAAIAMAAAABYAQwBvAG0AcAB"
+"PAHUAdABQAGkAbgA1AAAAAgAwAAAAFgBDAG8AbQBwAE8AdQB0AFAAaQBuADYAAAACADAAAAAWAEMA"
+"bwBtAHAATwB1AHQAUABpAG4ANwAAAAIAMAAAABgAQwBvAG0AcABPAHUAdABQAG8AcgB0ADEAAAACA"
+"DEAAAAYAEMAbwBtAHAATwB1AHQAUABvAHIAdAAyAAAAAgAxAAAAGABDAG8AbQBwAE8AdQB0AFAAbw"
+"ByAHQAMwAAAAIAMQAAABgAQwBvAG0AcABPAHUAdABQAG8AcgB0ADQAAAACADEAAAAYAEMAbwBtAHA"
+"ATwB1AHQAUABvAHIAdAA1AAAAAgAxAAAAGABDAG8AbQBwAE8AdQB0AFAAbwByAHQANgAAAAIAMQAA"
+"ABgAQwBvAG0AcABPAHUAdABQAG8AcgB0ADcAAAACADEAAAAOAEQAZQBiAHUAZwBJAGYAAAACADEAA"
+"AAaAEUAWABUAEUAUgBOAEEATABfAE0ATwBEAEUAAAACADIAAAASAEUAeAB0AEMAbABrAE0ASAB6AA"
+"AAAgA4AAAAIgBFAHgAdABNAG8AZABlAEIAdQBmAGYAZQByAFMAaQB6AGUAAAAIADEAMAAwADAAAAA"
+"gAEUAeAB0AE0AbwBkAGUAVQBhAHIAdABSAHgAUABpAG4AAAACADMAAAAiAEUAeAB0AE0AbwBkAGUA"
+"VQBhAHIAdABSAHgAUABvAHIAdAAAAAIAMQAAACAARQB4AHQATQBvAGQAZQBVAGEAcgB0AFQAeABQA"
+"GkAbgAAAAIAMgAAACIARQB4AHQATQBvAGQAZQBVAGEAcgB0AFQAeABQAG8AcgB0AAAAAgAxAAAAHA"
+"BHAGUAbgBlAHIAYQB0AGUAUABpAG4ATQBhAHAAAAACADEAAAAUAEkAbgBzAHQAYQBsAGwARABpAHI"
+"AAAAAAAAAHABOAGUAZQBkAHMAQQB1AHQAbwBwAHIAbwBiAGUAAAACADAAAAASAFAAbwBsAGEAcgBp"
+"AHQAeQAxAAAAAgAyAAAAEgBQAG8AbABhAHIAaQB0AHkAMgAAAAIAMgAAABIAUABvAGwAYQByAGkAd"
+"AB5ADMAAAACADIAAAASAFAAbwBsAGEAcgBpAHQAeQA0AAAAAgAyAAAAEgBQAG8AbABhAHIAaQB0AH"
+"kANQAAAAIAMgAAABIAUABvAGwAYQByAGkAdAB5ADYAAAACADIAAAASAFAAbwBsAGEAcgBpAHQAeQA"
+"3AAAAAgAyAAAADABQAHIAbwBnAEkAZgAAAAIAMQAAACAAUwBhAG0AcABsAGUAVABpAG0AZQBSAGUA"
+"bABUAG8AbAAAAAQAMQAwAAAAEgBTAGUAbgBzAGUAUABpAG4AMQAAAAIAMAAAABIAUwBlAG4AcwBlA"
+"FAAaQBuADIAAAACADAAAAASAFMAZQBuAHMAZQBQAGkAbgAzAAAAAgAwAAAAEgBTAGUAbgBzAGUAUA"
+"BpAG4ANAAAAAIAMAAAABIAUwBlAG4AcwBlAFAAaQBuADUAAAACADAAAAASAFMAZQBuAHMAZQBQAGk"
+"AbgA2AAAAAgAwAAAAEgBTAGUAbgBzAGUAUABpAG4ANwAAAAIAMAAAABQAUwBlAG4AcwBlAFAAbwBy"
+"AHQAMQAAAAIAMQAAABQAUwBlAG4AcwBlAFAAbwByAHQAMgAAAAIAMQAAABQAUwBlAG4AcwBlAFAAb"
+"wByAHQAMwAAAAIAMQAAABQAUwBlAG4AcwBlAFAAbwByAHQANAAAAAIAMQAAABQAUwBlAG4AcwBlAF"
+"AAbwByAHQANQAAAAIAMQAAABQAUwBlAG4AcwBlAFAAbwByAHQANgAAAAIAMQAAABQAUwBlAG4AcwB"
+"lAFAAbwByAHQANwAAAAIAMQAAABgAUwBlAHIAaQBhAGwATgB1AG0AYgBlAHIAAAAAAAAAJABTAGUA"
+"cgBpAGEAbABOAHUAbQBiAGUAcgBTAHQAcgBpAG4AZwAAAAAAAAAmAFMAcABlAGMAaQBmAHkAUwBlA"
+"HIAaQBhAGwATgB1AG0AYgBlAHIAAAACADAAAAASAFMAeQBzAEMAbABrAE0ASAB6AAAABgAxADcAMA"
+"AAABoAVABBAFIARwBFAFQAXwBEAEUAVgBJAEMARQAAADYAMAB8AC8AZABlAHYALwBjAHUALgB1AHM"
+"AYgBtAG8AZABlAG0AMQAxADQAMAAzAHwAMAB8ADAAAAAUAFQAYQByAGcAZQB0AE4AYQBtAGUAAAAQ"
+"AFMAVABNADMAMgBHADQAeAAAABYAVABhAHMAawBGAHIAZQBxAFQAbwBsAAAAAgAxAAAAGgBUAGEAc"
+"wBrAFMAYwBoAGUAZAB1AGwAZQByAAAAAgAyAAAAFABUAGgAcgBlAHMAaABvAGwAZAAxAAAABgAwAC"
+"4AMAAAABQAVABoAHIAZQBzAGgAbwBsAGQAMgAAAAYAMAAuADAAAAAUAFQAaAByAGUAcwBoAG8AbAB"
+"kADMAAAAGADAALgAwAAAAFABUAGgAcgBlAHMAaABvAGwAZAA0AAAABgAwAC4AMAAAABQAVABoAHIA"
+"ZQBzAGgAbwBsAGQANQAAAAYAMAAuADAAAAAUAFQAaAByAGUAcwBoAG8AbABkADYAAAAGADAALgAwA"
+"AAAFABUAGgAcgBlAHMAaABvAGwAZAA3AAAABgAwAC4AMAAAAEoAVQBTAEUAXwBEAEEAVABBAF8AVA"
+"BZAFAARQBTAF8ARgBPAFIAXwBUAFUATgBBAEIATABFAF8AUABBAFIAQQBNAEUAVABFAFIAUwAAAAI"
+"AMQAAADQAVQBTAEUAXwBTAFQAQQBSAFQAXwBUAEkATQBFAF8ASQBOAF8ASQBOAEkAVABfAEYAQwBO"
+"AAAAAgAwAAAAEgBVAHMAZQBJAG4AdABPAHMAYwAAAAIAMQ=="
+      CodeGenFloatingPointFormat "1"
+      ExternalModeSettings "AAAAfwAAAAAYQ29kZUdlblRhcmdldDo6U2V0dGluZ3MAAAAABw"
+"AAABQARABlAGMAaQBtAGEAdABpAG8AbgAAAAQAMQAwAAAAFABOAHUAbQBTAGEAbQBwAGwAZQBzAAA"
+"ACAA4ADEAOQAyAAAAFgBSAGUAZgByAGUAcwBoAFIAYQB0AGUAAAAEADIAMAAAABYAUwBlAG4AcwBp"
+"AHQAaQB2AGkAdAB5AAAAAgAwAAAAHABUAHIAaQBnAGcAZQByAEMAaABhAG4AbgBlAGwAAAAEAC0AM"
+"QAAABgAVAByAGkAZwBnAGUAcgBEAGUAbABhAHkAAAACADAAAAAYAFQAcgBpAGcAZwBlAHIAVgBhAG"
+"wAdQBlAAAAAgAw"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Terminal {
+        Type          Output
+        Position      [69, -40]
+        Direction     right
+        Index         "3"
+      }
+      Terminal {
+        Type          Input
+        Position      [-65, -40]
+        Direction     left
+        Index         "2"
+      }
+      Terminal {
+        Type          Output
+        Position      [69, -30]
+        Direction     right
+        Index         "2"
+      }
+      Terminal {
+        Type          Output
+        Position      [69, -20]
+        Direction     right
+        Index         "1"
+      }
+      Terminal {
+        Type          Input
+        Position      [-65, -30]
+        Direction     left
+        Index         "1"
+      }
+      Schematic {
+        Location      [130, 338; 862, 739]
+        ZoomFactor    1
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Scope
+          Name          "Scope"
+          Show          on
+          Position      [210, 240]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Location      [345, 163; 1063, 755]
+          State         "AAAA/wAAAAD9AAAAAgAAAAEAAACvAAACIvwCAAAAA/sAAAAQAFoAb"
+"wBvAG0AQQByAGUAYQAAAAAA/////wAAAFwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAA"
+"AA/////wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMAAAAAHAAAAiIAAABmAP///wAAAAMAAAHjAAA"
+"AdvwBAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAAeMAAAA+AP///wAAAs4AAAI0"
+"AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AA"
+"AAAAAAAAA=="
+          SavedViews    "AAAAAgAAAAA="
+          HeaderState   "{\"DefaultSecSize\":0,\"FirstSecSize\":149,\"Labels\""
+":[],\"VisualIdxs\":[]}"
+          PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+"QAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+          Axes          "2"
+          TimeRange     "0"
+          ScrollingMode "1"
+          SingleTimeAxis "1"
+          Open          "0"
+          Ts            "-1"
+          SampleLimit   "0"
+          XAxisLabel    "Time (s)"
+          ShowLegend    "1"
+          Axis {
+            Name          "Digital In"
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Axis {
+            Name          "ADC in"
+            AutoScale     1
+            MinValue      0
+            MaxValue      1
+            Signals       {"J7-69:Out"}
+            SignalTypes   [ ]
+            Untangle      0
+            KeepBaseline  off
+            BaselineValue 0
+          }
+          Fourier {
+            SingleXAxis       on
+            AxisLabel         "Frequency"
+            Scaling           0
+            PhaseDisplay      0
+            ShowFourierLegend off
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+            Axis {
+              Name          ""
+              AutoScale     1
+              MinValue      0
+              MaxValue      1
+              Signals       {"J7-69:Out"}
+              Untangle      0
+              KeepBaseline  off
+              BaselineValue 0
+            }
+          }
+        }
+        Component {
+          Type          Constant
+          Name          "duty"
+          Show          on
+          Position      [275, 190]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-20, -10; 20, 10]
+          Parameter {
+            Variable      "Value"
+            Value         "0.6"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "STM32_Lib/PWM"
+          Name          "PWM"
+          Show          on
+          Position      [360, 190]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Frame         [-25, -25; 25, 25]
+          Parameter {
+            Variable      "TimUnit"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierType"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierFreq"
+            Value         "1e3"
+            Show          off
+          }
+          Parameter {
+            Variable      "CarrierFreqTol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "DeadTime"
+            Value         "0.1e-6"
+            Show          off
+          }
+          Parameter {
+            Variable      "ShowEnable"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "FswVar"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1Mode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1Pol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1Port"
+            Value         "3"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1Pin"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1NPort"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch1NPin"
+            Value         "13"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2Mode"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2Pol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2Port"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Ch2Pin"
+            Value         "8"
+            Show          on
+          }
+          Parameter {
+            Variable      "Ch2NPort"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch2NPin"
+            Value         "14"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3Mode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3Pol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3Port"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3Pin"
+            Value         "10"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3NPort"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch3NPin"
+            Value         "15"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4Mode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4Pol"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4Port"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4Pin"
+            Value         "11"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4NPort"
+            Value         "3"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ch4NPin"
+            Value         "5"
+            Show          off
+          }
+          Parameter {
+            Variable      "ExternalSync"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "SyncTriggerType"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "AdcTrigger"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "TaskTrigger"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RepCtrPeriod"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "RepCtrEvent"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "RepCtrEventViewOnly"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "BreakMode"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "BreakPort"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "BreakPin"
+            Value         "6"
+            Show          off
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         "1"
+            Show          off
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, 0]
+            Direction     left
+          }
+          Terminal {
+            Type          EventOutput
+            Position      [29, 15]
+            Direction     right
+          }
+          Terminal {
+            Type          EventOutput
+            Position      [29, -15]
+            Direction     right
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, -10]
+            Direction     left
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, 10]
+            Direction     left
+          }
+          Terminal {
+            Type          EventInput
+            Position      [0, -25]
+            Direction     up
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "STM32_Lib/Digital In"
+          Name          "Digital In"
+          Show          on
+          Position      [95, 195]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Frame         [-25, -20; 25, 20]
+          Parameter {
+            Variable      "Port"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Pin"
+            Value         "[9]"
+            Show          on
+          }
+          Parameter {
+            Variable      "InputType"
+            Value         "3"
+            Show          off
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         "2"
+            Show          off
+          }
+          Terminal {
+            Type          Output
+            Position      [29, 0]
+            Direction     right
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "STM32_Lib/DAC"
+          Name          "DAC"
+          Show          on
+          Position      [360, 305]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Frame         [-25, -20; 25, 20]
+          Parameter {
+            Variable      "DacSelection"
+            Value         "2"
+            Show          off
+          }
+          Parameter {
+            Variable      "DacUnit"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Channel"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Port"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Pin"
+            Value         "4"
+            Show          on
+          }
+          Parameter {
+            Variable      "Scale"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Offset"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "MinOutput"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "MaxOutput"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         "3"
+            Show          off
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, 0]
+            Direction     left
+          }
+        }
+        Component {
+          Type          SineGenerator
+          Name          "Sine Wave3"
+          Show          off
+          Position      [280, 305]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Amplitude"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Bias"
+            Value         "1.1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Frequency"
+            Value         "100"
+            Show          on
+          }
+          Parameter {
+            Variable      "Phase"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "Units"
+            Value         "2"
+            Show          off
+          }
+        }
+        Component {
+          Type          Delay
+          Name          "Delay2"
+          Show          off
+          Position      [170, 70]
+          Direction     left
+          Flipped       off
+          LabelPosition north
+          Parameter {
+            Variable      "N"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "X0"
+            Value         "0"
+            Show          off
+          }
+          Parameter {
+            Variable      "Ts"
+            Value         "0.5"
+            Show          off
+          }
+        }
+        Component {
+          Type          LogicalOperator
+          Name          "Logical\nOperator2"
+          Show          off
+          Position      [170, 95]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Operator"
+            Value         "6"
+            Show          off
+          }
+          Parameter {
+            Variable      "Inputs"
+            Value         "1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "STM32_Lib/Digital Out"
+          Name          "LED Blinking"
+          Show          on
+          Position      [250, 70]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Frame         [-25, -20; 25, 20]
+          Parameter {
+            Variable      "Port"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Pin"
+            Value         "[5]"
+            Show          off
+          }
+          Parameter {
+            Variable      "OutputType"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         "4"
+            Show          off
+          }
+          Terminal {
+            Type          Input
+            Position      [-25, 0]
+            Direction     left
+          }
+        }
+        Component {
+          Type          Reference
+          SrcComponent  "STM32_Lib/Analog In"
+          Name          "Analog In"
+          Show          on
+          Position      [95, 310]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Frame         [-25, -25; 25, 25]
+          Parameter {
+            Variable      "AdcUnit"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Input"
+            Value         "[1]"
+            Show          off
+          }
+          Parameter {
+            Variable      "Scale"
+            Value         "[1]"
+            Show          off
+          }
+          Parameter {
+            Variable      "Offset"
+            Value         "[0]"
+            Show          off
+          }
+          Parameter {
+            Variable      "AcqTimeSel"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "AcqTime"
+            Value         ""
+            Show          off
+          }
+          Parameter {
+            Variable      "BitRes"
+            Value         "12"
+            Show          off
+          }
+          Parameter {
+            Variable      "VoltageRef"
+            Value         "3.3"
+            Show          off
+          }
+          Parameter {
+            Variable      "TargetPortIndices"
+            Value         "5"
+            Show          off
+          }
+          Terminal {
+            Type          Output
+            Position      [29, 0]
+            Direction     right
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Digital In"
+          SrcTerminal   1
+          Points        [150, 195; 150, 235]
+          DstComponent  "Scope"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "duty"
+          SrcTerminal   1
+          DstComponent  "PWM"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Analog In"
+          SrcTerminal   1
+          Points        [150, 310; 150, 245]
+          DstComponent  "Scope"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Sine Wave3"
+          SrcTerminal   1
+          DstComponent  "DAC"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Delay2"
+          SrcTerminal   2
+          Points        [135, 70; 135, 95]
+          DstComponent  "Logical\nOperator2"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Logical\nOperator2"
+          SrcTerminal   1
+          Points        [205, 95; 205, 70]
+          Branch {
+            DstComponent  "LED Blinking"
+            DstTerminal   1
+          }
+          Branch {
+            DstComponent  "Delay2"
+            DstTerminal   1
+          }
+        }
+        Annotation {
+          Name          "<html><body>\n<p>(A1) CN7-30</p></body></html>"
+          Position      [95, 360]
+        } 
+      }
+    }
+    Component {
+      Type          Delay
+      Name          "Delay"
+      Show          on
+      Position      [190, 40]
+      Direction     left
+      Flipped       off
+      LabelPosition north
+      Parameter {
+        Variable      "N"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "X0"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ts"
+        Value         "1e-4"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalDemux
+      Name          "Demux"
+      Show          off
+      Position      [95, 85]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Component {
+      Type          SignalMux
+      Name          "Mux"
+      Show          off
+      Position      [275, 85]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Parameter {
+        Variable      "Width"
+        Value         "2"
+        Show          off
+      }
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Delay"
+      SrcTerminal   2
+      Points        [75, 40]
+      DstComponent  "Demux"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux"
+      SrcTerminal   3
+      DstComponent  "Code Generation\nSubsystem"
+      DstTerminal   5
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Demux"
+      SrcTerminal   2
+      DstComponent  "Code Generation\nSubsystem"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Code Generation\nSubsystem"
+      SrcTerminal   3
+      DstComponent  "Mux"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Code Generation\nSubsystem"
+      SrcTerminal   1
+      DstComponent  "Mux"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Mux"
+      SrcTerminal   1
+      Points        [285, 40]
+      DstComponent  "Delay"
+      DstTerminal   1
+    }
+  }
+}
